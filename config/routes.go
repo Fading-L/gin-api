@@ -11,5 +11,7 @@ func Routes(r *gin.Engine)  {
  r.GET("/ping",  api.Ping )
  r.GET("/index", api.Index)
  r.POST("/create", api.Create)
+ r.POST("/delete/:id", api.Delete)
+ r.POST("/update/:id", api.Update)
  
 }

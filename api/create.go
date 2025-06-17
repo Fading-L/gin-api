@@ -7,13 +7,13 @@ import (
 )
 
 // CreateParams 创建商品的参数结构体
-type CreateParams struct {
+type Params struct {
 	Name  string `json:"name"`
 	Price uint   `json:"price"`
 }
 
 func Create(c *gin.Context) {
-	var params CreateParams
+	var params Params
 	if err := c.BindJSON(&params); err != nil {
 		c.JSON(400, gin.H{
 			"error": err.Error(),
