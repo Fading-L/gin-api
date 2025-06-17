@@ -9,5 +9,7 @@ func Routes(r *gin.Engine)  {
   // 这里可以添加路由规则
   //  r := gin.Default()
  r.GET("/ping",  api.Ping )
+ r.GET("/index", api.Index)
+ r.POST("/create", api.Create)
  
 }
